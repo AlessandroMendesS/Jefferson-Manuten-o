@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Jefferson Manutenção - Equipamentos de Panificação</title>
+    <link rel="icon" href="img/Favicon logo.jpeg" type="image/jpeg">
+    
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#09722c",
+                        "primary-dark": "#075a23",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102216",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a3322",
+                        "charcoal": "#333333"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { min-height: 100vh; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased selection:bg-primary selection:text-slate-900">
+
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden bg-white dark:bg-background-dark">
+        
+        <header class="sticky top-0 z-40 bg-white/95 dark:bg-surface-dark/95 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 shadow-sm">
+            <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+                <button id="menu-btn" class="md:hidden flex items-center justify-center size-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+
+                <div class="flex-1 text-center md:text-left">
+                    <h2 class="text-lg font-black tracking-tight uppercase text-primary">
+                        Jefferson <span class="text-slate-900 dark:text-white">Manutenção</span>
+                    </h2>
+                </div>
+
+                <nav class="hidden md:flex items-center gap-8 text-sm font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300">
+                    <a href="#" class="nav-link hover:text-primary transition-colors">Início</a>
+                    <a href="#servicos" class="nav-link hover:text-primary transition-colors">Serviços</a>
+                    <a href="#trabalhos" class="nav-link hover:text-primary transition-colors">Trabalhos</a>
+                    <a href="#contato" class="nav-link hover:text-primary transition-colors">Contato</a>
+                </nav>
+
+                <div class="hidden md:block ml-8">
+                    <a href="tel:+5519981375597" class="bg-primary text-white px-5 py-2 rounded-lg text-sm font-bold hover:bg-primary-dark transition-all">
+                        Ligar Agora
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main class="flex-1">
+            
+            <section class="relative bg-charcoal text-white pt-24 pb-32 px-6 overflow-hidden">
+                <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
+                    <div class="space-y-8 text-center md:text-left">
+                        <div>
+                            <span class="inline-block px-4 py-1.5 bg-primary text-white text-xs font-black rounded-full uppercase tracking-[0.2em] mb-6">
+                                Guaxupé e Região
+                            </span>
+                            <h1 class="text-5xl md:text-7xl font-black leading-[1.1] mb-6">
+                                Manutenção de Equipamentos de <span class="text-primary">Panificação</span>
+                            </h1>
+                            <p class="text-gray-300 text-lg md:text-xl font-medium max-w-lg mx-auto md:mx-0">
+                                Especialista em fornos e masseiras com 16 anos de experiência técnica garantindo sua produção.
+                            </p>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                            <button id="btn-orcamento" class="h-16 px-8 bg-primary hover:bg-primary-dark text-white rounded-2xl font-black text-lg shadow-xl shadow-primary/20 transition-all active:scale-95 flex items-center justify-center gap-3">
+                                <span class="material-symbols-outlined">request_quote</span>
+                                Solicitar Orçamento
+                            </button>
+                            <a href="tel:+5519981375597" class="h-16 px-8 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl font-black text-lg transition-all active:scale-95 flex items-center justify-center gap-3">
+                                <span class="material-symbols-outlined">call</span>
+                                Ligar Agora
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hidden md:flex justify-center items-center opacity-20">
+                        <img src="img/Favicon logo.jpeg" alt="Logo Grande" class="size-[28rem] rounded-[4rem] object-cover border-8 border-white/10 shadow-2xl">
+                    </div>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center opacity-[0.05] md:hidden">
+                    <img src="img/Favicon logo.jpeg" alt="Logo Mobile" class="size-[35rem] rounded-[5rem] object-cover">
+                </div>
+            </section>
+
+            <section class="py-20 px-6 max-w-7xl mx-auto -mt-16 bg-white dark:bg-surface-dark rounded-[3rem] shadow-2xl relative z-20 border border-gray-100 dark:border-gray-800">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="relative">
+                        <div class="size-40 md:size-56 rounded-full border-8 border-background-light dark:border-background-dark p-1 bg-white shadow-xl overflow-hidden">
+                            <img src="img/Perfil.png" alt="Jefferson Renato" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute bottom-4 right-4 bg-primary text-white rounded-full p-3 border-4 border-white dark:border-surface-dark shadow-lg">
+                            <span class="material-symbols-outlined text-2xl">verified</span>
+                        </div>
+                    </div>
+                    <div class="text-center md:text-left flex-1 space-y-6">
+                        <div>
+                            <p class="text-primary font-black uppercase tracking-[0.3em] text-sm mb-2">Técnico Especialista</p>
+                            <h3 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white">Jefferson Renato</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed max-w-2xl">
+                            Compromisso com a qualidade e agilidade para que sua produção não pare. 
+                            Minha missão é oferecer soluções técnicas precisas para o mercado de panificação em toda a região.
+                        </p>
+                        <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                            <div class="bg-background-light dark:bg-background-dark px-6 py-4 rounded-3xl border border-gray-200 dark:border-gray-700 text-center min-w-[140px]">
+                                <span class="material-symbols-outlined text-primary text-3xl mb-1">workspace_premium</span>
+                                <p class="text-2xl font-black">16 Anos</p>
+                                <p class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Experiência</p>
+                            </div>
+                            <div class="bg-background-light dark:bg-background-dark px-6 py-4 rounded-3xl border border-gray-200 dark:border-gray-700 text-center min-w-[140px]">
+                                <span class="material-symbols-outlined text-primary text-3xl mb-1">map</span>
+                                <p class="text-2xl font-black">Regional</p>
+                                <p class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Atendimento</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="servicos" class="py-24 px-6 max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h3 class="text-4xl font-black inline-flex items-center gap-4">
+                        <span class="w-12 h-2 bg-primary rounded-full"></span>
+                        Nossos Serviços
+                    </h3>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="group p-10 rounded-[2.5rem] bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 hover:border-primary/50 hover:shadow-2xl transition-all duration-500">
+                        <div class="size-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-4xl">build_circle</span>
+                        </div>
+                        <h4 class="text-2xl font-black mb-4">Manutenção Preventiva</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                            Evite paradas inesperadas e prejuízos com revisões periódicas programadas em seus equipamentos.
+                        </p>
+                    </div>
+                    <div class="group p-10 rounded-[2.5rem] bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 hover:border-primary/50 hover:shadow-2xl transition-all duration-500">
+                        <div class="size-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-4xl">oven_gen</span>
+                        </div>
+                        <h4 class="text-2xl font-black mb-4">Reparo de Fornos</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                            Especialista em reparos de alta complexidade em fornos turbo, lastro e combinados (Prática, Venâncio, Tedesco, etc).
+                        </p>
+                    </div>
+                    <div class="group p-10 rounded-[2.5rem] bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 hover:border-primary/50 hover:shadow-2xl transition-all duration-500">
+                        <div class="size-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-4xl">settings_suggest</span>
+                        </div>
+                        <h4 class="text-2xl font-black mb-4">Troca de Peças</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                            Substituição técnica de resistências, motores, sensores e correias com componentes originais e garantia.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="trabalhos" class="py-24 bg-background-light dark:bg-background-dark px-6">
+                <div class="max-w-7xl mx-auto text-center md:text-left mb-16 flex flex-col md:flex-row justify-between items-end gap-6">
+                    <h3 class="text-4xl font-black flex items-center gap-4">
+                        <span class="w-12 h-2 bg-primary rounded-full"></span>
+                        Trabalhos Recentes
+                    </h3>
+                    <button class="bg-white dark:bg-surface-dark px-6 py-3 rounded-xl border border-gray-200 dark:border-gray-700 text-sm font-bold hover:bg-gray-50 transition-colors uppercase tracking-widest">
+                        Ver Portfólio
+                    </button>
+                </div>
+                <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="aspect-square bg-charcoal rounded-[2rem] flex items-center justify-center border border-white/5 hover:scale-105 transition-transform duration-500">
+                        <span class="material-symbols-outlined text-6xl text-white/20">cooking</span>
+                    </div>
+                    <div class="aspect-square bg-charcoal rounded-[2rem] flex items-center justify-center border border-white/5 hover:scale-105 transition-transform duration-500">
+                        <span class="material-symbols-outlined text-6xl text-white/20">oven_gen</span>
+                    </div>
+                    <div class="aspect-square bg-charcoal rounded-[2rem] flex items-center justify-center border border-white/5 hover:scale-105 transition-transform duration-500">
+                        <span class="material-symbols-outlined text-6xl text-white/20">tools_wrench</span>
+                    </div>
+                    <div class="aspect-square bg-primary/10 rounded-[2rem] flex flex-col items-center justify-center border border-primary/20 cursor-pointer group hover:bg-primary/20 transition-all">
+                        <span class="material-symbols-outlined text-5xl text-primary mb-3 group-hover:rotate-90 transition-transform duration-500">grid_view</span>
+                        <p class="font-black text-xs uppercase tracking-widest text-primary">Ver Mais</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contato" class="py-24 px-6 max-w-7xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h3 class="text-4xl font-black flex items-center gap-4 mb-8">
+                            <span class="w-12 h-2 bg-primary rounded-full"></span>
+                            Área de Atendimento
+                        </h3>
+                        <p class="text-lg text-gray-600 dark:text-gray-400 mb-10">
+                            Sediado em <span class="font-bold text-slate-900 dark:text-white">Guaxupé - MG</span>, realizo atendimento técnico especializado em toda a região próxima, garantindo rapidez e eficiência no suporte.
+                        </p>
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4 p-5 rounded-2xl bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 shadow-sm">
+                                <div class="size-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                                    <span class="material-symbols-outlined">location_on</span>
+                                </div>
+                                <div>
+                                    <p class="font-black text-lg">Guaxupé, Minas Gerais</p>
+                                    <p class="text-xs text-gray-500 uppercase font-bold">Base Principal</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 p-5 rounded-2xl bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 shadow-sm">
+                                <div class="size-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                                    <span class="material-symbols-outlined">electric_bolt</span>
+                                </div>
+                                <div>
+                                    <p class="font-black text-lg">Suporte Imediato</p>
+                                    <p class="text-xs text-gray-500 uppercase font-bold">Região Regional</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white dark:border-surface-dark h-[450px]">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14878.118029094776!2d-46.72147175!3d-21.1711718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b41b9d4f9bf5e3%3A0xe5a3c907b856b3b5!2sGuaxup%C3%A9%2C%20MG!5e0!3m2!1spt-BR!2sbr!4v1708680000000!5m2!1spt-BR!2sbr" 
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="bg-slate-900 text-white pt-24 pb-12 px-6">
+            <div class="max-w-7xl mx-auto flex flex-col gap-16">
+                <div class="grid md:grid-cols-3 gap-12 border-b border-white/5 pb-16">
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <img src="img/Favicon logo.jpeg" alt="Logo" class="size-20 rounded-2xl shadow-lg border border-white/10">
+                            <h2 class="text-3xl font-black text-primary">Jefferson <span class="text-white">Manutenção</span></h2>
+                        </div>
+                        <p class="text-gray-400 leading-relaxed font-medium">Líder regional em manutenção técnica especializada para padarias, confeitarias e cozinhas industriais.</p>
+                    </div>
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-5">
+                            <span class="material-symbols-outlined text-primary text-3xl">person</span>
+                            <div>
+                                <p class="text-gray-500 text-[10px] uppercase font-bold tracking-[0.2em] mb-1">Responsável Técnico</p>
+                                <p class="text-lg font-bold">Jefferson Renato Almeida Paula</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-5">
+                            <span class="material-symbols-outlined text-primary text-3xl">call</span>
+                            <div>
+                                <p class="text-gray-500 text-[10px] uppercase font-bold tracking-[0.2em] mb-1">Contato Urgente</p>
+                                <a href="tel:+5519981375597" class="text-lg font-bold hover:text-primary transition-colors">(19) 9 8137-5597</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-5">
+                            <span class="material-symbols-outlined text-primary text-3xl">schedule</span>
+                            <div>
+                                <p class="text-gray-500 text-[10px] uppercase font-bold tracking-[0.2em] mb-1">Horário Operacional</p>
+                                <p class="text-lg font-bold">Seg - Sex: 07h às 17h</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-5">
+                            <span class="material-symbols-outlined text-primary text-3xl">contact_support</span>
+                            <div>
+                                <p class="text-gray-500 text-[10px] uppercase font-bold tracking-[0.2em] mb-1">Atendimento Externo</p>
+                                <p class="text-lg font-bold">Guaxupé e Região</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-6 text-gray-500 text-sm font-medium">
+                    <p>© 2026 Jefferson Manutenção. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
+
+        <div id="menu-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[90] hidden"></div>
+        <aside id="mobile-menu" class="fixed top-0 left-0 bottom-0 w-80 bg-white dark:bg-surface-dark z-[100] shadow-2xl p-8 flex flex-col hidden-menu">
+            <div class="flex justify-between items-center mb-16">
+                <h2 class="text-xl font-black text-primary">Menu</h2>
+                <button id="close-menu-btn" class="size-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-8 text-2xl font-black text-slate-900 dark:text-white">
+                <a href="#" class="hover:text-primary transition-colors">Início</a>
+                <a href="#servicos" class="hover:text-primary transition-colors">Serviços</a>
+                <a href="#trabalhos" class="hover:text-primary transition-colors">Trabalhos</a>
+                <a href="#contato" class="hover:text-primary transition-colors">Contato</a>
+            </nav>
+            <div class="mt-auto pt-12 border-t border-gray-100 dark:border-gray-800">
+                <p class="text-xs uppercase font-bold text-gray-400 mb-4">Suporte</p>
+                <a href="tel:+5519981375597" class="text-lg font-bold">(19) 98137-5597</a>
+            </div>
+        </aside>
+
+        <div class="fixed bottom-6 right-6 z-50">
+            <button id="chat-btn" class="relative group flex items-center justify-center size-16 bg-[#25d366] rounded-full shadow-2xl whatsapp-pulse transition-transform hover:scale-110 active:scale-95 duration-300">
+                <i class="fa-brands fa-whatsapp text-white text-4xl"></i>
+            </button>
+        </div>
+
+        <div id="modal-overlay" class="fixed inset-0 z-[110] bg-black/60 backdrop-blur-md flex items-end md:items-center justify-center hidden">
+            <div id="modal" class="bg-white dark:bg-surface-dark w-full max-w-xl md:rounded-[2.5rem] rounded-t-[2.5rem] p-8 pb-12 shadow-2xl translate-y-full transition-all duration-500">
+                <div class="flex justify-between items-center mb-10">
+                    <div>
+                        <h3 class="text-3xl font-black">Solicitar Orçamento</h3>
+                        <p class="text-gray-500 font-medium">Resposta rápida via WhatsApp</p>
+                    </div>
+                    <button id="modal-close" class="size-12 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                </div>
+                <div class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 ml-4">Nome Completo</label>
+                            <input type="text" placeholder="Como podemos te chamar?" class="w-full h-14 bg-slate-50 dark:bg-background-dark border-0 rounded-2xl px-6 font-bold text-slate-900 dark:text-white focus:ring-4 focus:ring-primary/20 transition-all outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 ml-4">Whatsapp / Celular</label>
+                            <input type="tel" placeholder="(00) 00000-0000" class="w-full h-14 bg-slate-50 dark:bg-background-dark border-0 rounded-2xl px-6 font-bold text-slate-900 dark:text-white focus:ring-4 focus:ring-primary/20 transition-all outline-none">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 ml-4">Equipamento e Defeito</label>
+                        <textarea rows="4" placeholder="Descreva brevemente o equipamento e o problema..." class="w-full bg-slate-50 dark:bg-background-dark border-0 rounded-3xl px-6 py-4 font-bold text-slate-900 dark:text-white focus:ring-4 focus:ring-primary/20 transition-all outline-none resize-none"></textarea>
+                    </div>
+                    <a id="whatsapp-link" href="#" target="_blank" class="w-full h-16 bg-[#25d366] text-white rounded-2xl font-black text-lg flex items-center justify-center gap-4 shadow-xl shadow-green-500/20 transition-all active:scale-95 group">
+                        <i class="fa-brands fa-whatsapp text-2xl group-hover:scale-125 transition-transform"></i>
+                        Enviar Solicitação
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
