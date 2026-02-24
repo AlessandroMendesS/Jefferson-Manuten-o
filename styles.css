@@ -3,6 +3,16 @@
     padding: 0.5rem 0;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.hero-section {
+    padding-top: max(5rem, calc(4rem + env(safe-area-inset-top)));
+    padding-bottom: max(8rem, calc(6rem + env(safe-area-inset-bottom)));
+}
+
 @media (min-width: 768px) {
     .nav-link::after {
         content: "";
